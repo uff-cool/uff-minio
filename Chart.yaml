@@ -1,0 +1,13 @@
+apiVersion: v2
+name: loki
+description: A Helm chart for deploying the Loki Stack on our Hub-Cluster
+
+type: application
+
+version: 0.1.0
+appVersion: "12.2.4"
+
+dependencies:
+  - name: minio
+    repository: "https://charts.bitnami.com/bitnami"
+    version: 12.2.4

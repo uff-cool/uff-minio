@@ -1,0 +1,27 @@
+minio:
+  fullnameOverride: uff-minio
+  replicas: 1
+  persistence:
+    size: 50Gi
+  auth:
+    rootPassword: "changes-via-inventory"
+  resources:
+    requests:
+      memory: 2Gi
+    limits:
+      memory: 4Gi
+  serviceAccount:
+    create: true
+    automountServiceAccountToken: true
+  provisioning:
+    enabled: true
+    buckets:
+      - name: chunks
+        policy: none
+        purge: false
+      - name: ruler
+        policy: none
+        purge: false
+      - name: admin
+        policy: none
+        purge:
