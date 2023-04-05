@@ -3,6 +3,7 @@ minio:
   replicas: 1
   persistence:
     size: 50Gi
+    storageClass: "safe"
   auth:
     rootPassword: "changes-via-inventory"
   resources:
