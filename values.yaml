@@ -11,7 +11,7 @@ minio:
     accessModes:
       - ReadWriteMany
   auth:
-    existingSecret: "loki-backend-secret"
+    existingSecret: "uff-minio-secret"
   resources:
     requests:
       memory: 2Gi #default 4Gi bei 500Gi persistent storage. Sollte mit weniger auch auskommen.
